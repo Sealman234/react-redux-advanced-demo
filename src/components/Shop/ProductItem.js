@@ -28,7 +28,7 @@ const ProductItem = (props) => {
         totalPrice: price,
       });
     } else {
-      const updatedItem = [...existingItem]; // Create a shallow copy via Spread Operator
+      const updatedItem = { ...existingItem }; // Create a shallow copy via Spread Operator
       updatedItem.quantity += 1;
       updatedItem.totalPrice += price;
       const existingItemIndex = updatedItems.findIndex(
